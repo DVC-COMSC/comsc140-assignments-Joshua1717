@@ -1,19 +1,18 @@
-# Python program to swap element of a list
+numbers = (input("Enter some numbers with space between them: "))
+intnumbers = numbers.split()
 
-# Getting list from user
-myList = []
-num1 = list(map(int, input("Enter some numbers for the first list:").split()))
-for i in range(0, num1):
-    val = int(input())
-    myList.append(val)
+# convert list to ints
+for i in range(len(intnumbers)):
+    intnumbers[i] = int(intnumbers[i])
+    
+print("Input: ")
+print(intnumbers)
+print("Output:")
+# Find min value and sort
 
-print("Enter indexes to be swapped ")
-index1 = int(input("index 1: "))
-index2 = int(input("index 2: "))
-
-print("Initial List: ", myList)
-# Swapping given elements
-myList[index1], myList[index2] = myList[index2], myList[index1]
-
-# Printing list 
-print("List after Swapping: ", myList)
+for i in range(len(intnumbers)):
+    for j in range(i + 1, len(intnumbers)):
+       
+        if intnumbers[i] > intnumbers[j]:
+            intnumbers[i], intnumbers[j] = intnumbers[j], intnumbers[i]
+    print (intnumbers)

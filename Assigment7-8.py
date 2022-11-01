@@ -3,10 +3,10 @@ def main():
     
     words = input("Enter some words:")
     
-    if (("a" in words) and ("r" in words) and ("e" in words)):
-        a_index = words.find("a")
+    if (("p" in words) and ("r" in words) and ("o" in words)):
+        a_index = words.find("p")
         r_index = words.find("r")
-        e_index = words.find("e")
+        e_index = words.find("o")
 
         if a_index < r_index < e_index:
             print("True")
