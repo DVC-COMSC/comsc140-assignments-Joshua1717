@@ -1,14 +1,24 @@
-# Python3 program to swap elements
-# at given positions
- 
-# Swap function
-def swapPositions(lis, pos1, pos2):
-    temp=lis[pos1]
-    lis[pos1]=lis[pos2]
-    lis[pos2]=temp
-    return lis
-# Driver function
-List = [2, 3, 0, 5, 4, 1, 6, 9, 8, 7]
-pos1, pos2 = 1, 3
- 
-print(swapPositions(List, pos1-1, pos2-1))
+numbers = [2, 3, 0, 5, 4, 1, 6, 9, 8, 7]
+
+
+def foldandswap(numbers):
+	N = len(numbers)
+	j=1
+	for i in range(N//2):
+		temp = numbers[i]
+		numbers[i] = numbers[N - j]
+		numbers[N - j] = temp
+		j= j+1
+		print(numbers)
+	print("The list with numbers swapped is", numbers)
+
+print("The orignal list is: ", numbers)
+
+foldandswap(numbers)
+
+
+
+
+
+
+
