@@ -1,15 +1,12 @@
 
-
-
-from functools import reduce
-
-
 strval = 'Python programming section 2'
+isspace = lambda string : string.isalpha()
 
 
 def mystrip(strval):
-    
-    return reduce(lambda x, y: (x + y) if(y != " ") else x, strval )
+    print(isspace(strval))
+    str = strval.replace(" ","")
+    return str
      
     
 

@@ -1,14 +1,15 @@
+stringvalue = input("Enter a string: ")
+N = int(input("Enter number of spaces to shift elements: "))
+direction = int(input("Enter the direction (0 = left, 1 = right): "))
 
-a = 0
-b = 1
- 
+def shiftN(stringvalue, direction, N):
 
-print("a >> 1 =", a >> 1)
-print("b >> 1 =", b >> 1)
- 
-a = 5
-b = -10
- 
+    if direction == 0:
+        shiftedspaces = stringvalue[N:] + stringvalue[:N]
+        return shiftedspaces
 
-print("a << 1 =", a << 1)
-print("b << 1 =", b << 1)
+    if direction == 1:
+        shiftedspaces = stringvalue[len(stringvalue)-N:] + stringvalue[0:len(stringvalue)-N]
+        return shiftedspaces
+
+print(shiftN(stringvalue, direction, N))

@@ -1,17 +1,14 @@
+list1 = [5, 3, 1, 1, 2]
+list2 = [1, 2, 2, 9, 5]
 
-def findProductSum(A,n):
- 
-    product = 0
-    for i in range (n):
-        for j in range ( i+1,n):
-            product = product + A[i]*A[j]
-    return product
-  
+def sumProduct(l1, l2):
+    products = []
+    sumP=0
+    for num1, num2 in zip(list1, list2):
+	    products.append(num1 * num2)
+    sumP=sum(products)
+    #print(products)
+    return sumP
 
-if __name__=="__main__":
- 
-    A = [5, 3, 1, 1, 2]
-    n = len (A)
-  
-    print("sum of product of all pairs "
-    "of array elements : " ,findProductSum(A, n))
+result =sumProduct(list1,list2)
+print(result)

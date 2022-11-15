@@ -1,8 +1,3 @@
-def fib(n):
-    a, b = 0, 1
-    for i in range(n):
-        yield a
-        a, b = b, a+b
-
-fibnum = list(fib(20))
-print (fibnum)
+my_list = [5, 20, 50]
+my_list = [str(i) for i in my_list]
+print(my_list)
