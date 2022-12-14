@@ -68,6 +68,11 @@ class Names():
         print(ca)
         assert ca.__str__ != None
 
+        print(' The total number of names 200', '\n',
+			'The total number of male names 100', '\n',
+			'The total number of female names 100')
+
+
     def _gt():
         ca = Names('ca2021.txt')
         fl = Names('fl2021.txt')
